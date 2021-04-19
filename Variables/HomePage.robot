@@ -7,8 +7,8 @@ ${SUGGESTION_DROPDOWN_HOMEPAGE}    //div[@data-testid="suggestions"]
 ${MOEBEL_SUGGESTION_IN_SUGGESTIONBOX_HOMEPAGE}    //div[@data-testid="suggestions"]//nav//a[contains(@href,"/moebel/")]
 
 
-${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}    //div[contains(@class,'LoginAndRegisterPopUp')]
-${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}    //button[@data-testid="login_reg_switch_btn"]
+${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}    //div[contains(@class,'PopUp')]/div
+${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}    //button[@data-testid="login-button"]
 ${EMAIL_TEXTBOX_HOMEPAGE}    //form//input[@name="email"]
 ${PASSWORD_TEXTBOX_HOMEPAGE}    //form//input[@name="password"]
 ${LOGIN_SUBMIT_BUTTON_HOMEPAGE}    //button[@data-testid="login_reg_submit_btn"]

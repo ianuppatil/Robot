@@ -83,3 +83,5 @@ Delete added product from the wishlist
     Wait Until Keyword Succeeds    ${RETRY_TIMES_CONFIGPAGE}      ${WAIT_TIME_CONFIGPAGE}    Click element    ${DELETE_ICON_WISHLISTPAGE}
     Wait Until Keyword Succeeds    ${RETRY_TIMES_CONFIGPAGE}      ${WAIT_TIME_CONFIGPAGE}    Element should not be visible    ${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}
     Page Should Contain Element    ${WISHLIST_WISHLISTPAGE}    limit=0
+
+Sign out
