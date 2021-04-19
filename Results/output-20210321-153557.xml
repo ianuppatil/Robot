@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.8.5 on win32)" generated="20210321 15:35:57.630" rpa="false" schemaversion="2">
+<suite id="s1" name="Suite01 AddToWishlistAndRemove" source="C:\Users\Anup\PycharmProjects\Robot\TestSuites\Suite01_AddToWishlistAndRemove.robot">
+<test id="s1-t1" name="TC01_Validation of addition of product to wishlist and remove it.">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<arg>./Results/Evidences</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210321 15:35:57.902" endtime="20210321 15:35:57.910"/>
+</kw>
+<kw name="Given All the browser cookies are cleared" library="Common_BDD">
+<kw name="Clear browser cookies" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${GOOGLE_HOMEPAGE_URL_CONFIGPAGE}</arg>
+<arg>${BROWSER_CONFIGPAGE}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210321 15:35:57.910" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20210321 15:35:57.910" endtime="20210321 15:36:02.037"/>
+</kw>
+<kw name="Delete All Cookies" library="Selenium2Library">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20210321 15:36:02.037" endtime="20210321 15:36:02.066"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210321 15:36:02.068" endtime="20210321 15:36:04.233"/>
+</kw>
+<status status="PASS" starttime="20210321 15:35:57.910" endtime="20210321 15:36:04.233"/>
+</kw>
+<status status="PASS" starttime="20210321 15:35:57.910" endtime="20210321 15:36:04.233"/>
+</kw>
+<kw name="And I am on the WestwingNow home page" library="Common_BDD">
+<kw name="Navigate to WestwingnNow website" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${WESTWINGNOW_HOMEPAGE_URL_CONFIGPAGE}</arg>
+<arg>${BROWSER_CONFIGPAGE}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210321 15:36:04.233" level="INFO">Opening browser 'chrome' to base url 'https://www.westwingnow.de'.</msg>
+<status status="PASS" starttime="20210321 15:36:04.233" endtime="20210321 15:36:10.130"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210321 15:36:10.130" endtime="20210321 15:36:10.262"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${ACCEPT_COOKIES_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${ACCEPT_COOKIES_BUTTON_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:10.264" endtime="20210321 15:36:12.521"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:10.263" endtime="20210321 15:36:12.521"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click button</arg>
+<arg>${ACCEPT_COOKIES_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${ACCEPT_COOKIES_BUTTON_HOMEPAGE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:12.521" level="INFO">Clicking button '//button[@id="onetrust-accept-btn-handler"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:12.521" endtime="20210321 15:36:12.646"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:12.521" endtime="20210321 15:36:12.646"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>${ACCEPT_COOKIES_BUTTON_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210321 15:36:12.646" endtime="20210321 15:36:13.207"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:04.233" endtime="20210321 15:36:13.207"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:04.233" endtime="20210321 15:36:13.207"/>
+</kw>
+<kw name="When I search for ${SEARCH_TEXT}" library="Common_BDD" sourcename="I search for ${SEARCH_TEXT}">
+<kw name="Search using ${SEARCH_TEXT}" library="Common" sourcename="Search using ${SEARCH_TEXT}">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Input Text</arg>
+<arg>${SEARCH_TEXTBOX_HOMEPAGE}</arg>
+<arg>${SEARCH_TEXT}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SEARCH_TEXTBOX_HOMEPAGE}</arg>
+<arg>${SEARCH_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:13.212" level="INFO">Typing text 'möbel' into text field '//input[@type="search"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:13.212" endtime="20210321 15:36:13.576"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:13.212" endtime="20210321 15:36:13.576"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${SUGGESTION_DROPDOWN_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${SUGGESTION_DROPDOWN_HOMEPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210321 15:36:14.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Evidences/selenium-screenshot-1.png"&gt;&lt;img src="Evidences/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210321 15:36:13.826" endtime="20210321 15:36:14.485"/>
+</kw>
+<msg timestamp="20210321 15:36:14.485" level="FAIL">Page should have contained element '//div[@data-testid="suggestions"]' but did not.</msg>
+<status status="FAIL" starttime="20210321 15:36:13.580" endtime="20210321 15:36:14.485"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${SUGGESTION_DROPDOWN_HOMEPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:19.511" level="INFO">Current page contains element '//div[@data-testid="suggestions"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:19.491" endtime="20210321 15:36:19.511"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:13.576" endtime="20210321 15:36:19.511"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${SUGGESTION_DROPDOWN_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${SUGGESTION_DROPDOWN_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:19.541" level="INFO">Element '//div[@data-testid="suggestions"]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:19.511" endtime="20210321 15:36:19.541"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:19.511" endtime="20210321 15:36:19.541"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click element</arg>
+<arg>${MOEBEL_SUGGESTION_IN_SUGGESTIONBOX_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${MOEBEL_SUGGESTION_IN_SUGGESTIONBOX_HOMEPAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:19.549" level="INFO">Clicking element '//div[@data-testid="suggestions"]//nav//a[contains(@href,"/moebel/")]'.</msg>
+<status status="PASS" starttime="20210321 15:36:19.541" endtime="20210321 15:36:19.733"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:19.541" endtime="20210321 15:36:19.733"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:13.212" endtime="20210321 15:36:19.733"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:13.207" endtime="20210321 15:36:19.733"/>
+</kw>
+<kw name="Then I should see product listing page with a list of products" library="Common_BDD">
+<kw name="List of products are returned" library="Common">
+<kw name="Location Should Contain" library="Selenium2Library">
+<arg>${URL_TEXT}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20210321 15:36:19.741" level="INFO">Current location contains 'moebel/?searched=M%C3%B6bel'.</msg>
+<status status="PASS" starttime="20210321 15:36:19.733" endtime="20210321 15:36:19.741"/>
+</kw>
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210321 15:36:19.741" endtime="20210321 15:36:19.758"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:19.760" endtime="20210321 15:36:21.799"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:19.758" endtime="20210321 15:36:21.799"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page should contain element</arg>
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:21.814" level="INFO">Current page contains element '//main[contains(@class,"ListingPageElements")]//div[contains(@class,"ListingPageElements")]'.</msg>
+<status status="PASS" starttime="20210321 15:36:21.801" endtime="20210321 15:36:21.814"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.799" endtime="20210321 15:36:21.814"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${LIST_OF_RETURNED_PRODUCTS_PRODUCTLISTINGPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:21.848" level="INFO">Element '//main[contains(@class,"ListingPageElements")]//div[contains(@class,"ListingPageElements")]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:21.816" endtime="20210321 15:36:21.848"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.814" endtime="20210321 15:36:21.849"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:21.851" endtime="20210321 15:36:21.874"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.849" endtime="20210321 15:36:21.874"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page should contain element</arg>
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:21.888" level="INFO">Current page contains element '//div[@data-testid="generic-product"][1]//div//*[contains(@class,"Heart")]'.</msg>
+<status status="PASS" starttime="20210321 15:36:21.876" endtime="20210321 15:36:21.888"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.875" endtime="20210321 15:36:21.888"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:21.916" level="INFO">Element '//div[@data-testid="generic-product"][1]//div//*[contains(@class,"Heart")]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:21.891" endtime="20210321 15:36:21.916"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.888" endtime="20210321 15:36:21.916"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${SORT_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${SORT_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:21.916" endtime="20210321 15:36:21.934"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.916" endtime="20210321 15:36:21.934"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page should contain element</arg>
+<arg>${SORT_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${SORT_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:21.945" level="INFO">Current page contains element '//select[contains(@class,"SortBox_")]'.</msg>
+<status status="PASS" starttime="20210321 15:36:21.934" endtime="20210321 15:36:21.945"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:21.934" endtime="20210321 15:36:21.945"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210321 15:36:26.948" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210321 15:36:21.945" endtime="20210321 15:36:26.948"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210321 15:36:27.337" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Evidences/selenium-screenshot-2.png"&gt;&lt;img src="Evidences/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210321 15:36:26.948" endtime="20210321 15:36:27.337"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:19.733" endtime="20210321 15:36:27.337"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:19.733" endtime="20210321 15:36:27.337"/>
+</kw>
+<kw name="When I click on wishlist icon of the first found product" library="Common_BDD">
+<kw name="Click on the heart icon of the first product" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:27.337" endtime="20210321 15:36:27.353"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.337" endtime="20210321 15:36:27.353"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click element</arg>
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${HEART_ICON_PRODUCTLISTINGPAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:27.353" level="INFO">Clicking element '//div[@data-testid="generic-product"][1]//div//*[contains(@class,"Heart")]'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.353" endtime="20210321 15:36:27.504"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.353" endtime="20210321 15:36:27.504"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.337" endtime="20210321 15:36:27.504"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.337" endtime="20210321 15:36:27.504"/>
+</kw>
+<kw name="Then I should see the login or registration overlay" library="Common_BDD">
+<kw name="Verify login or registration overlay" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:27.508" endtime="20210321 15:36:27.536"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.508" endtime="20210321 15:36:27.536"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page should contain element</arg>
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:27.557" level="INFO">Current page contains element '//div[contains(@class,'LoginAndRegisterPopUp')]'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.536" endtime="20210321 15:36:27.557"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.536" endtime="20210321 15:36:27.557"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${LOGIN_REGISTRATION_OVERLAY_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:27.584" level="INFO">Element '//div[contains(@class,'LoginAndRegisterPopUp')]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:27.557" endtime="20210321 15:36:27.584"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.557" endtime="20210321 15:36:27.584"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page should contain element</arg>
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:27.600" level="INFO">Current page contains element '//button[@data-testid="login_reg_switch_btn"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.584" endtime="20210321 15:36:27.600"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.584" endtime="20210321 15:36:27.600"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:27.624" level="INFO">Element '//button[@data-testid="login_reg_switch_btn"]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:27.600" endtime="20210321 15:36:27.624"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.600" endtime="20210321 15:36:27.625"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.508" endtime="20210321 15:36:27.625"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.508" endtime="20210321 15:36:27.625"/>
+</kw>
+<kw name="When I switch to login form of the overlay" library="Common_BDD">
+<kw name="Switch to login form" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:27.625" endtime="20210321 15:36:27.630"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.625" endtime="20210321 15:36:27.630"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click button</arg>
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${LOGIN_NAVIGATION_BUTTON_FOOTER_HOMEPAGE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:27.630" level="INFO">Clicking button '//button[@data-testid="login_reg_switch_btn"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.630" endtime="20210321 15:36:27.777"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.630" endtime="20210321 15:36:27.777"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:27.777" endtime="20210321 15:36:27.798"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.777" endtime="20210321 15:36:27.798"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.625" endtime="20210321 15:36:27.798"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.625" endtime="20210321 15:36:27.798"/>
+</kw>
+<kw name="And I log in with credentials" library="Common_BDD">
+<kw name="Login" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page Should Contain</arg>
+<arg>${LOGIN_POPUP_HEADER_TEXT}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${LOGIN_POPUP_HEADER_TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210321 15:36:27.846" level="INFO">Current page contains text 'Bereits registriert?'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.798" endtime="20210321 15:36:27.846"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.798" endtime="20210321 15:36:27.846"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:27.849" endtime="20210321 15:36:27.862"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.846" endtime="20210321 15:36:27.862"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Input Text</arg>
+<arg>${EMAIL_TEXTBOX_HOMEPAGE}</arg>
+<arg>${EMAILADDRESS_TEXT}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${EMAIL_TEXTBOX_HOMEPAGE}</arg>
+<arg>${EMAILADDRESS_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:27.864" level="INFO">Typing text 'ianuppatil@gmail.com' into text field '//form//input[@name="email"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:27.863" endtime="20210321 15:36:28.017"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.862" endtime="20210321 15:36:28.017"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Input Text</arg>
+<arg>${PASSWORD_TEXTBOX_HOMEPAGE}</arg>
+<arg>${PASSWORD_TEXT}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${PASSWORD_TEXTBOX_HOMEPAGE}</arg>
+<arg>${PASSWORD_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:28.017" level="INFO">Typing text 'SGH@dy301' into text field '//form//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:28.017" endtime="20210321 15:36:28.131"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:28.017" endtime="20210321 15:36:28.131"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click button</arg>
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:28.131" level="INFO">Clicking button '//button[@data-testid="login_reg_submit_btn"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:28.131" endtime="20210321 15:36:28.383"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:28.131" endtime="20210321 15:36:28.383"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait until page does not contain element</arg>
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Does Not Contain Element" library="Selenium2Library">
+<arg>${LOGIN_SUBMIT_BUTTON_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:28.383" endtime="20210321 15:36:29.565"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:28.383" endtime="20210321 15:36:29.565"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.798" endtime="20210321 15:36:29.573"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:27.798" endtime="20210321 15:36:29.573"/>
+</kw>
+<kw name="Then the product should be added to the wishlist" library="Common_BDD">
+<kw name="Verify added product counter is displayed on to the wishlist icon" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:29.575" endtime="20210321 15:36:29.599"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.575" endtime="20210321 15:36:29.599"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:29.630" level="INFO">Current page contains element '//span[@data-testid="wishlist-counter" and text()="1"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:29.608" endtime="20210321 15:36:29.630"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.599" endtime="20210321 15:36:29.630"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:29.675" level="INFO">Element '//span[@data-testid="wishlist-counter" and text()="1"]' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:29.631" endtime="20210321 15:36:29.675"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.631" endtime="20210321 15:36:29.675"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.575" endtime="20210321 15:36:29.675"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.575" endtime="20210321 15:36:29.675"/>
+</kw>
+<kw name="And I go to the wishlist page" library="Common_BDD">
+<kw name="Navigate to wishlist section" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click element</arg>
+<arg>${WISHLIST_ICON_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${WISHLIST_ICON_HOMEPAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:29.687" level="INFO">Clicking element '//*[@class="icon-wishlist"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:29.685" endtime="20210321 15:36:34.518"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.681" endtime="20210321 15:36:34.518"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.681" endtime="20210321 15:36:34.518"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:29.675" endtime="20210321 15:36:34.521"/>
+</kw>
+<kw name="And I validate the added product in the wishlist page" library="Common_BDD">
+<kw name="Validate the added product" library="Common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210321 15:36:34.522" endtime="20210321 15:36:34.543"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:34.522" endtime="20210321 15:36:34.543"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should be visible</arg>
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210321 15:36:34.579" level="INFO">Element '//ul[@class="listProducts"]/li' is displayed.</msg>
+<status status="PASS" starttime="20210321 15:36:34.543" endtime="20210321 15:36:34.579"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:34.543" endtime="20210321 15:36:34.579"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<arg>limit=1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:34.598" level="INFO">Current page contains 1 element(s).</msg>
+<status status="PASS" starttime="20210321 15:36:34.579" endtime="20210321 15:36:34.598"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210321 15:36:39.612" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210321 15:36:34.600" endtime="20210321 15:36:39.612"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210321 15:36:39.995" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Evidences/selenium-screenshot-3.png"&gt;&lt;img src="Evidences/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210321 15:36:39.612" endtime="20210321 15:36:39.995"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:34.522" endtime="20210321 15:36:39.995"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:34.522" endtime="20210321 15:36:39.995"/>
+</kw>
+<kw name="And I delete the product from my wishlist" library="Common_BDD">
+<kw name="Delete added product from the wishlist" library="Common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210321 15:36:42.011" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210321 15:36:39.995" endtime="20210321 15:36:42.011"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Click element</arg>
+<arg>${DELETE_ICON_WISHLISTPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${DELETE_ICON_WISHLISTPAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210321 15:36:42.011" level="INFO">Clicking element '//button[@class="blockListProduct__delete qaBlockListProduct__delete"]'.</msg>
+<status status="PASS" starttime="20210321 15:36:42.011" endtime="20210321 15:36:42.106"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:42.011" endtime="20210321 15:36:42.106"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${RETRY_TIMES_CONFIGPAGE}</arg>
+<arg>${WAIT_TIME_CONFIGPAGE}</arg>
+<arg>Element should not be visible</arg>
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210321 15:36:42.532" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Evidences/selenium-screenshot-4.png"&gt;&lt;img src="Evidences/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210321 15:36:42.139" endtime="20210321 15:36:42.532"/>
+</kw>
+<msg timestamp="20210321 15:36:42.532" level="FAIL">The element '//span[@data-testid="wishlist-counter" and text()="1"]' should not be visible, but it is.</msg>
+<status status="FAIL" starttime="20210321 15:36:42.110" endtime="20210321 15:36:42.532"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>${WISHLIST_ICON_WITH_COUNTER_HOMEPAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210321 15:36:47.543" level="INFO">Element '//span[@data-testid="wishlist-counter" and text()="1"]' did not exist.</msg>
+<status status="PASS" starttime="20210321 15:36:47.532" endtime="20210321 15:36:47.543"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:42.106" endtime="20210321 15:36:47.543"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${WISHLIST_WISHLISTPAGE}</arg>
+<arg>limit=0</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210321 15:36:47.562" level="INFO">Current page contains 0 element(s).</msg>
+<status status="PASS" starttime="20210321 15:36:47.543" endtime="20210321 15:36:47.562"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:39.995" endtime="20210321 15:36:47.562"/>
+</kw>
+<status status="PASS" starttime="20210321 15:36:39.995" endtime="20210321 15:36:47.562"/>
+</kw>
+<doc>TC01-Validate the wishlist functionality</doc>
+<tag>Sanity</tag>
+<status status="PASS" starttime="20210321 15:35:57.902" endtime="20210321 15:36:47.562"/>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210321 15:36:47.562" endtime="20210321 15:36:49.789"/>
+</kw>
+<doc>Automation of Westwingnow Application</doc>
+<status status="PASS" starttime="20210321 15:35:57.630" endtime="20210321 15:36:49.789"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suite01 AddToWishlistAndRemove">Suite01 AddToWishlistAndRemove</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
