@@ -1,0 +1,7 @@
+*** Variables ***
+${GOOGLE_HOMEPAGE_URL_CONFIGPAGE}    https://www.google.com/
+${WESTWINGNOW_HOMEPAGE_URL_CONFIGPAGE}    https://www.westwingnow.de
+${BROWSER_CONFIGPAGE}    chrome
+${RETRY_TIMES_CONFIGPAGE}    3x
+${WAIT_TIME_CONFIGPAGE}    5s
+${ENCODED_PASSWORD_CONFIGPAGE}
